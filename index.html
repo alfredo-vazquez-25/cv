@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Head todo la info que es para el navegador y no se ve, salvo el titulo. -->
+	<meta charset="UTF-8">
+	<title>Programador Web Freelance</title>
+	<!-- Estilos de Bootstrap que es codigo responsive y visual ya escrito por otro. -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<!-- codigo de colores y estilos escrito por nosotros -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Tipografia B612 -->
+	<link href="https://fonts.googleapis.com/css2?family=B612&display=swap" rel="stylesheet">
+	<!-- esto es para que el navegador se de cuenta cuando estamos en un celular o tableta-->
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+</head>
+<!-- <body> Todo lo que se ve en la pantalla del usuario -->
+<body>
+<header>
+	<div class="container">
+		<div class="row top">
+			<!-- en esta linea cambiamos nuestro logo. -->
+			<div class="col-md-4"><a href="#home" data-ancla="home" class="off">
+				<img src="images/foto_perfil_av.jpg" alt="" class="logo"></a></div>
+			<div class="col-md-3"></div>
+			<div class="col-md-5">
+				<ul class='botonera'>
+					<li><a href="#nosotros" data-ancla="nosotros">Proyectos</a></li>
+					<li><a href="#servicios" data-ancla="servicios">Servicios</a></li>
+					<li><a href="#contacto" data-ancla="contacto">Contacto</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="principal vertical-centered-text" id="home">
+	<div class="col-md-8 cta"><h1>Soy Alfredo Vazquez, programador Web Freelance</h1> 
+			<h4>Diseño y Desarrollo de sitios web</h4>
+			<p>Empezando a codear!</p>
+			<a  href="https://www.linkedin.com/in/alfredo-vazquez/" class="btn btn-primary orange">Ver más sobre mí</a>
+
+		</div>
+</div>
+
+<div class="nosotros orange" id="nosotros">
+	<div class="container">
+		<h2>Te cuento algo de mí</h2>
+		<p>Desde el 2014 trabajo en Programación, QA(aseguramiento de la calidad), Servicio técnico, Diseño Web...</p>
+	</div>
+</div>
+
+
+<div class="container servicios" id="servicios">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Programador web que cuenta con experiencia en Java, Spring, .NET, MySQL, HTML, CSS...</h1>
+		</div>
+	</div>
+	<div class="row images">
+		<div class="col-md-3">
+			<img src="images/diseño-web.svg" alt="">
+			<h3>Diseño Web</h3>
+			<p>Trabajo en conjunto con diseñadores</p>
+		</div>
+		<div class="col-md-3">
+			<img src="images/desarrollo-web.svg" alt="">
+			<h3>Desarrollo Web</h3>
+			<p>Realizo desarrollo web a medida, altamente optimizado. Web estructuradas y web autoadministrables.</p>
+		</div>
+		<div class="col-md-3">
+			<img src="images/tecnico.svg" alt="">
+			<h3>Servicio técnico y Facilitador</h3>
+			<p>Además de Servicio técnico de PC, notebooks y netbooks. Si queres aprender algunas de las herramientas ofimáticas como en Microsoft Office y en Open Source, también programación inicial!</p>
+		</div>
+		<div class="col-md-3">
+			<img src="images/ajuste.svg" alt="">
+			<h3>Soporte</h3>
+			<p>Soporte y mantenimiento de las web</p>
+		</div>
+	</div>
+	
+</div>
+
+<footer>
+	<div class="container" id="contacto">
+		<div class="row">
+			<div class="col-md-12">
+					<h1>CONTACTO</h1><br><br>
+
+			</div>
+		</div>
+		<div class="row social">
+		<div class="col-3"></div>	
+					<div class="col-2">
+						<a href="mailto:avazquezmoraga@gmail.com"><img src="images/001-mail.svg" alt=""></a></div>
+
+					<div class="col-2">
+						<a href="https://www.facebook.com/alfre.17"  target="_blank"><img src="images/002-facebook-logo.svg" alt=""></a></div>
+
+
+					<div class="col-2">
+						<a target="_blank" href="https://www.instagram.com/alfre.vazquez/" ><img src="images/003-instagram-social-network-logo-of-photo-camera.svg" alt=""></a></div>	
+	</div>
+</footer>
+<!-- Codigo que hace que las acciones de botones y cuestiones responsive funcionen-->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<script>
+	// A $( document ).ready() block.
+$(document).ready(function() {    
+$('.top a').click(function(e){
+        e.preventDefault();
+        var offset = $($(this).attr('href')).offset().top;
+        $('html, body').animate({scrollTop:offset}, 600);
+        return false;
+    });
+
+});
+	
+</script>
+</body>
+</html>
